@@ -8,6 +8,10 @@ Dark and light mode appearance control.
 npm install react-native-appearance-control
 ```
 
+```sh
+yarn add react-native-appearance-control
+```
+
 ## Usage
 
 These methods will set the native appearance for the app to either force the app into dark/light mode (irrespective of the phone's configuration), or to use the system mode and let the phone's configuration dictate whether to use a light or dark appearance.
