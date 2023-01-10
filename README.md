@@ -1,6 +1,10 @@
 # react-native-appearance-control
 
-Dark and light mode appearance control.
+Dark and light mode appearance control methods.
+
+Force the app into dark/light mode (irrespective of the phone's configuration), or use the system mode and let the phone's configuration dictate whether to use a light or dark appearance.
+
+Combine this with your own state control (e.g. a global theme context) to give the user the power to choose their own appearance.
 
 ## Installation
 
@@ -14,9 +18,9 @@ yarn add react-native-appearance-control
 
 ## Usage
 
-These methods will set the native appearance for the app to either force the app into dark/light mode (irrespective of the phone's configuration), or to use the system mode and let the phone's configuration dictate whether to use a light or dark appearance.
-
-Combine this with your own state control (e.g. a global theme context) to give the user the power to choose their own appearance.
+* setAppearanceDark - force this app into dark/night display
+* setAppearanceLight - force this app into light display
+* setAppearanceSystem - use the device's settings to derive colour scheme (i.e. mode unspecified)
 
 ```js
 import { View, Button, useColorScheme } from 'react-native';
