@@ -1,6 +1,6 @@
 {
   "name": "react-native-appearance-control",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Dark and light mode appearance control methods",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
