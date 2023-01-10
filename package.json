@@ -39,7 +39,11 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "dark mode",
+    "night mode",
+    "appearance",
+    "user interface style"
   ],
   "repository": "https://github.com/72days/react-native-appearance-control",
   "author": "72 Days <apps@72days.dev> (https://72days.dev)",
