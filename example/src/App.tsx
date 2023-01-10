@@ -28,10 +28,11 @@ export default function App() {
     }
   }, [mode]);
 
+  const backgroundColor = appearance === 'dark' ? '#000' : '#fff';
   const color = appearance === 'dark' ? '#fff' : '#000';
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor }]}>
       <Text style={{ color }}>Mode: {mode}</Text>
       <Text style={{ color }}>Appearance: {appearance}</Text>
       <View>

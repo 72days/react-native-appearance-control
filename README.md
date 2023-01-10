@@ -19,15 +19,23 @@ These methods will set the native appearance for the app to either force the app
 Combine this with your own state control (e.g. a global theme context) to give the user the power to choose their own appearance.
 
 ```js
+import { View, Button, useColorScheme } from 'react-native';
 import { setAppearanceDark, setAppearanceLight, setAppearanceSystem } from 'react-native-appearance-control';
 
 // ...
 
-<View>
-  <Button title="Dark" onPress={setAppearanceDark} />
-  <Button title="Light" onPress={setAppearanceLight} />
-  <Button title="Auto/System" onPress={setAppearanceSystem} />
-</View>
+function MyApp() {
+  const colorScheme = useColorScheme()
+  const isDark = colorScheme === 'dark'
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', backgroundColor: isDark ? '#000' : '#fff' }}>
+      <Text style={{ color: isDark ? '#fff' : '#000' }}>Appearance: {colorScheme}</Text>
+      <Button title="Dark" onPress={setAppearanceDark} />
+      <Button title="Light" onPress={setAppearanceLight} />
+      <Button title="Auto/System" onPress={setAppearanceSystem} />
+    </View>
+  )
+}
 ```
 
 ## Contributing
