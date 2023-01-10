@@ -1,6 +1,7 @@
 package com.appearancecontrol;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -19,11 +20,21 @@ public class AppearanceControlModule extends AppearanceControlSpec {
     return NAME;
   }
 
-
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
   @ReactMethod
-  public void multiply(double a, double b, Promise promise) {
-    promise.resolve(a * b);
+  public void setAppearanceDark(Promise promise) {
+    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+    promise.resolve(null);
+  }
+
+  @ReactMethod
+  public void setAppearanceLight(Promise promise) {
+    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+    promise.resolve(null);
+  }
+
+  @ReactMethod
+  public void setAppearanceSystem(Promise promise) {
+    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+    promise.resolve(null);
   }
 }

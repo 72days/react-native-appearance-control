@@ -24,6 +24,14 @@ const AppearanceControl = AppearanceControlModule
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return AppearanceControl.multiply(a, b);
+export function setAppearanceDark() {
+  AppearanceControl.setAppearanceDark();
+}
+
+export function setAppearanceLight() {
+  AppearanceControl.setAppearanceLight();
+}
+
+export function setAppearanceSystem() {
+  AppearanceControl.setAppearanceSystem();
 }

@@ -10,12 +10,20 @@ npm install react-native-appearance-control
 
 ## Usage
 
+These methods will set the native appearance for the app to either force the app into dark/light mode (irrespective of the phone's configuration), or to use the system mode and let the phone's configuration dictate whether to use a light or dark appearance.
+
+Combine this with your own state control (e.g. a global theme context) to give the user the power to choose their own appearance.
+
 ```js
-import { multiply } from 'react-native-appearance-control';
+import { setAppearanceDark, setAppearanceLight, setAppearanceSystem } from 'react-native-appearance-control';
 
 // ...
 
-const result = await multiply(3, 7);
+<View>
+  <Button title="Dark" onPress={setAppearanceDark} />
+  <Button title="Light" onPress={setAppearanceLight} />
+  <Button title="Auto/System" onPress={setAppearanceSystem} />
+</View>
 ```
 
 ## Contributing
