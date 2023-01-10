@@ -9,5 +9,7 @@ abstract class AppearanceControlSpec extends ReactContextBaseJavaModule {
     super(context);
   }
 
-  public abstract void multiply(double a, double b, Promise promise);
+  public abstract void setAppearanceDark(Promise promise);
+  public abstract void setAppearanceLight(Promise promise);
+  public abstract void setAppearanceSystem(Promise promise);
 }
